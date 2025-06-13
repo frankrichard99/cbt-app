@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+}
+:root {
+  --deep-teal: #1e4e5b;
+  --light-blue-gray: #c8d8e4;
+  --white: #ffffff;
+  --light-gray: #f2f2f2;
+  --soft-green-teal: #52ab98;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  /* overflow-y: auto; */
+}
+.main{
+  overflow-y: auto;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    "nav nav"
+    "sidebar main";
+  height: 100%;
+}
+
+nav {
+  grid-area: nav;
+  color: var(--light-blue-gray);
+  background-color: var(--deep-teal);
+  border-bottom: 2px solid var(--light-blue-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.account-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: var(--light-blue-gray);
+}
+.account-icon{
+  width: 25px;
+  fill: var(--light-blue-gray);
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--deep-teal);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 100vh; /* Sidebar fully visible by default */
+  transition: transform 0.5s ease-in-out, max-height 0.5s ease-in-out;
+}
+
+/* Sidebar hidden on small screens */
+.sidebar.hidden {
+  transform: translateY(-100%);
+  max-height: 0;
+}
+
+/* Sidebar visible when toggled */
+.sidebar.active {
+  transform: translateY(0);
+  max-height: 500px; /* Adjust based on sidebar height */
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: var(--light-blue-gray);
+}
+
+.main {
+  grid-area: main;
+  background: var(--light-blue-gray);
+}
+
+#hamburger {
+  display: none;
+
+  fill: var(--light-blue-gray);
+  background: none;
+  border: 0;
+}
+
+.account_name {
+  display: inline-block;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 770px) {
+  .parent {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "main";
+  }
+
+  .sidebar {
+    position: fixed; /* Ensure it covers the screen */
+    width: 100%; /* Full width */
+    height: auto; /* Let it adjust */
+    top: 7.5%; /* Adjust if needed */
+    left: 0;
+    background-color: var(--deep-teal);
+    max-height: 0; /* Initially hidden */
+    overflow: hidden; /* Prevent extra spacing */
+    transition: max-height 0.5s ease-in-out;
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+
+  .sidebar.active {
+    transform: translateY(0);
+    max-height: 500px; /* Ensure visibility when toggled */
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .account-div {
+    display: none;
+  }
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+#dropbtn {
+  background-color: var(--deep-teal);
+  color: var(--light-blue-gray);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Sidebar Menu Items */
+.menu-item {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--deep-teal);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+  color: var(--light-blue-gray);
+}
+
+.menu-item:hover {
+  background-color: #1abc9c;
+}
+
+/* Submenu */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  background-color: var(--deep-teal);
+  transition: max-height 0.3s ease-out;
+  color: var(--light-blue-gray);
+}
+
+.submenu a {
+  display: block;
+  padding: 8px;
+  color: var(--light-blue-gray);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.submenu a:hover {
+  background-color: var(--soft-green-teal);
+}
+
+/* Show submenu */
+.submenu.open {
+  max-height: 200px; /* Adjust based on content */
+}
+
+

@@ -1,0 +1,96 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+:root {
+  --deep-teal: #1e4e5b;
+  --light-blue-gray: #c8d8e4;
+  --white: #ffffff;
+  --light-gray: #f2f2f2;
+  --soft-green-teal: #52ab98;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #ddd;
+}
+
+/* Parent Grid Container */
+.parent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90vw;
+  height: 80vh;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side (Purple Background) */
+.leftdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--deep-teal);
+  color: #fff;
+  padding: 5%;
+}
+
+/* Right Side (Form) */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+
+
+  
+  
+}
+
+.tick{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  width: 5rem;
+  height: 5rem;
+  color: white;
+  margin: 1rem 0;
+  border-radius: 50%;
+  background-color: var(--soft-green-teal);
+}
+
+.main a{
+  text-decoration: underline;
+  font-style: italic;
+  color: var(--deep-teal);
+
+}
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .leftdiv {
+    padding: 10%;
+  }
+}

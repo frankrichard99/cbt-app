@@ -1,0 +1,111 @@
+.main{
+    display: flex;
+    align-items: start;
+    padding: 1rem 2rem;   
+    flex-direction: column;
+}
+.profile-container {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    margin-bottom: 1rem;
+}
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.details{
+    color: rgb(30, 29, 29);
+    font-weight: bold;
+}
+.edit-btn {
+    margin-top: 10px;
+    background: var(--soft-green-teal);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup-body label {
+    display: block;
+    margin-top: 10px;
+}
+.popup-body input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    margin-top: 5px;
+}
+.popup-body select{
+    padding: 8px;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    margin-top: 5px;
+}
+.popup-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.cancel-btn, .save-btn {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.cancel-btn {
+    background: gray;
+    color: white;
+    
+}
+.cancel-btn, .save-btn{
+    border-radius: 0.5rem;
+    border: 0;
+    transition: background 0.3s;
+}
+.save-btn {
+    background: var(--soft-green-teal);
+    color: white;
+
+}
+.cancel-btn:hover {
+    background: rgb(41, 41, 41);
+   
+}
+.save-btn:hover {
+    background: var(--deep-teal);
+ 
+}
+.close-btn{
+    cursor: pointer;
+}

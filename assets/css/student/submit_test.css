@@ -1,0 +1,65 @@
+.submitted-test-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.course-header {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--deep-teal);
+}
+
+.success-icon {
+  font-size: 60px;
+  color: var(--soft-green-teal);
+  margin: 20px 0;
+}
+
+.confirmation-message {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.score-box, .test-summary {
+  background: white;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+.test-summary p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: var(--soft-green-teal);
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-button:hover {
+  background: var(--deep-teal);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .submitted-test-container {
+      width: 90%;
+  }
+}

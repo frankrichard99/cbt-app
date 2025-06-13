@@ -1,0 +1,153 @@
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter';
+}
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/inter/Inter-VariableFont_opsz\,wght.ttf);
+}
+:root {
+  --deep-teal: #1e4e5b;
+  --light-blue-gray: #c8d8e4;
+  --white: #ffffff;
+  --light-gray: #f2f2f2;
+  --soft-green-teal: #52ab98;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #ddd;
+}
+
+/* Parent Grid Container */
+.parent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 90vw;
+  height: 80vh;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side (Purple Background) */
+.leftdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--deep-teal);
+  color: #fff;
+  padding: 5%;
+}
+
+/* Right Side (Form) */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+form {
+  width: 80%;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Username & Password Input Styling */
+.username, .password {
+  display: flex;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 0.7rem;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  gap: 0.5rem;
+}
+
+.username input, .password input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0.25rem;
+}
+
+/* SVG Styling */
+.svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--soft-green-teal);
+}
+/* Account type section */
+
+.account-type{
+  display: flex;
+  justify-content: space-evenly;
+}
+.account-type .teacher, .account-type .student{
+  display: flex;
+  align-items: center;
+}
+
+/* Remember Me & Forgot Password */
+.recovery {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+
+  align-items: center;
+}
+
+
+/* Button Styling */
+input[type="submit"] {
+  background: var(--soft-green-teal);
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+input[type="submit"]:hover {
+  background: var(--deep-teal);
+}
+
+/* Form links */
+form a{
+  text-decoration: none;
+  color: var(--deep-teal);
+}
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--soft-green-teal); /* Change to any color */
+}
+
+/* Responsive for Smaller Screens */
+@media (max-width: 768px) {
+  .parent {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .leftdiv {
+    padding: 10%;
+  }
+}

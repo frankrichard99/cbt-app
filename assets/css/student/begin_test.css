@@ -1,0 +1,137 @@
+.test-container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header */
+.test-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Timer */
+.timer {
+  font-weight: bold;
+  color: var(--deep-teal);
+  font-size: 1.5rem;
+}
+
+/* Question Number Navigation */
+.question-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.question-box {
+  width: 40px;
+  height: 40px;
+
+  border: 2px solid var(--deep-teal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--deep-teal);
+}
+.question-box.answered{
+  background-color: var(--deep-teal);
+  color: white !important;
+  border: none;
+}
+
+.question-box.active{
+
+  color: var(--deep-teal);
+  border: 2px solid red;
+}
+
+/* Question Section */
+.question-section {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.question-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.options label {
+  display: block;
+  margin: 8px 0;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.prev-btn, .next-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.prev-btn {
+  background: gray;
+  color: white;
+}
+.prev-btn:hover {
+  background: rgb(33, 32, 32);
+  color: white;
+}
+
+.next-btn {
+  background: var(--soft-green-teal);
+  color: white;
+}
+
+.next-btn:hover {
+  background: var(--deep-teal);
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 20px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  background: red;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+.submit-btn a{
+  text-decoration: none;
+  color: white;
+}
+
+.error-p{
+
+  color: var(--soft-green-teal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(2rem, 5vw, 5rem);
+  min-height: 100%; 
+  margin: 0;
+  
+}

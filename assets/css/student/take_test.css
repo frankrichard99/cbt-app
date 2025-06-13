@@ -1,0 +1,70 @@
+
+.test-container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--deep-teal);
+}
+.take-test-btn a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.test-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+    /* max-height: 400px; 
+    overflow-y: auto; */
+
+}
+
+.test-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 290px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.test-card:hover {
+  transform: scale(1.05);
+}
+.test-card a{
+  text-decoration: none;
+  color: white;
+}
+.card-h2{
+  margin: 0;
+}
+/* .card-h3{
+
+} */
+.lecturer{
+  font-style: italic;
+  color: red;
+}
+.take-test-btn {
+  background: var(--soft-green-teal);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  float: right;
+}
+
+.take-test-btn:hover {
+  background: var(--deep-teal);
+}
